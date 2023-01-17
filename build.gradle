@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id "io.quarkus" version "$quarkusVersion"
+}
+
+group 'ru.tsc.crm.zeebe'
+version "${version}"
+
+dependencies {
+    implementation(platform("io.quarkus:quarkus-bom:$quarkusVersion"),
+            "io.quarkus:quarkus-liquibase",
+            "io.quarkus:quarkus-jdbc-postgresql",
+            "io.quarkus:quarkus-config-yaml",
+    )
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+publishing {
+    repositories {
+        mavenLocal()
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-parameters'
+}

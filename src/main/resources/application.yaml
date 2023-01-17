@@ -1,0 +1,18 @@
+quarkus:
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: postgres
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/wc_hub?currentSchema=wc_hub
+  liquibase:
+    default-catalog-name:
+    change-log: /db/migration/tasks-changelog.xml
+    migrate-at-start: true
+    default-schema-name: wc_hub
+  log:
+    level: INFO
+    category:
+      "liquibase":
+        min-level: DEBUG
+        level: DEBUG
