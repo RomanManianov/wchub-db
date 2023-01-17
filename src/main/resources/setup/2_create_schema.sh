@@ -1,0 +1,1 @@
+psql -U postgres -h localhost -d wc_hub -f 3_create_schema.sql
