@@ -2,6 +2,7 @@ CREATE TABLE admins
 (
     id BIGSERIAL NOT NULL,
     code VARCHAR(30) NOT NULL,
+    role VARCHAR(20) NOT NULL,
     username VARCHAR(20) NOT NULL,
     streamer_code VARCHAR(30),
     super_admin_code VARCHAR(30) NOT NULL,

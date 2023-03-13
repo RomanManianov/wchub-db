@@ -5,5 +5,7 @@ CREATE TABLE super_admins_admins
     admin_code VARCHAR(30) NOT NULL,
 
     created_at TIMESTAMP NOT NULL DEFAULT current_timestamp,
-    active BOOLEAN NOT NULL DEFAULT true
+    active BOOLEAN NOT NULL DEFAULT true,
+
+    CONSTRAINT admin_code UNIQUE (admin_code)
 );
