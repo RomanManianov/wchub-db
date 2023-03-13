@@ -2,6 +2,8 @@
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
-    <include file="ORG-31/task.changelog.xml" relativeToChangelogFile="true"/>
-    <include file="ORG-32/task.changelog.xml" relativeToChangelogFile="true"/>
+    <changeSet id="ORG-32" author="gagareen">
+        <comment>создание таблицы super_admins</comment>
+        <sqlFile path="1_create_table_super_admins_admins.sql" endDelimiter=";" relativeToChangelogFile="true"/>
+    </changeSet>
 </databaseChangeLog>
