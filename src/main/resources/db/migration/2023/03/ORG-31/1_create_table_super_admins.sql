@@ -8,5 +8,5 @@ CREATE TABLE super_admins
     created_at TIMESTAMP NOT NULL DEFAULT current_timestamp,
     updated_at TIMESTAMP NOT NULL DEFAULT current_timestamp,
     active BOOLEAN NOT NULL DEFAULT true,
-    CONSTRAINT admins_pk PRIMARY KEY (id)
+    CONSTRAINT super_admins_pk PRIMARY KEY (id)
 );
