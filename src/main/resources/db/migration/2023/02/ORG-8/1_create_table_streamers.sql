@@ -5,6 +5,7 @@ CREATE TABLE streamers
     username VARCHAR(20) NOT NULL,
     name VARCHAR(30) NOT NULL,
     admin_code VARCHAR(30) NOT NULL,
+    super_admin_code VARCHAR(30) NOT NULL,
     role VARCHAR(20) NOT NULL,
     age INTEGER NOT NULL,
     photo BYTEA,
